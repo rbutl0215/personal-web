@@ -1,6 +1,7 @@
 import ExperienceCard from "@/components/ExperienceCard";
-import { experiences } from "./contants";
+import { experiences, projects } from "./contants";
 import Section from "@/components/Section";
+import ProjectCard from "@/components/ProjectCard";
 
 export default function Home() {
   return (
@@ -24,7 +25,11 @@ export default function Home() {
           })}
         </Section>
         <Section title="Projects">
-          My projects
+          {
+            projects.map((project, index) => {
+              return <ProjectCard key={index} {...project} />
+            })
+          }
         </Section>
       </div>
     </main>

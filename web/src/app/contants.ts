@@ -1,4 +1,5 @@
 import { ExperienceCardProps } from "@/components/ExperienceCard";
+import { ProjectCardProps } from "@/components/ProjectCard";
 
 export const experiences: ExperienceCardProps[] = [
   {
@@ -48,3 +49,24 @@ export const experiences: ExperienceCardProps[] = [
     ]
   }
 ];
+
+export const projects: ProjectCardProps[] = [
+    {
+        title: "Describby",
+        description: "AI based tooled to assist in content creation or real estate agents",
+        imageUrl: "https://nlp7257gkjhtxzam.public.blob.vercel-storage.com/describby-4ZSDsxMbfbrXiNzL8zDVQeATLkWGTe.png",
+        link: "https://broker-6m3pbq7gv-describby.vercel.app/"
+    },
+    {
+        title: "Probability Trees",
+        description: "A dinner table hypothetical that went too far",
+        imageUrl: "https://nlp7257gkjhtxzam.public.blob.vercel-storage.com/probability-trees-QC1qugZzlZW1DEgm6AcoW8vbgEtrhp.png",
+        link: "https://github.com/rbutl0215/probability-trees"
+    },
+    {
+        title: "Brewery on Mars",
+        description: "An internal training tool that went from Excel to full blown web app",
+        imageUrl: "https://nlp7257gkjhtxzam.public.blob.vercel-storage.com/brewery-on-mars-AlLXXWESQD2LITqkGcFwscd6tN9U7T.png",
+        link: "https://see6.ai/case-studies/ai-simulation-for-anheuser-busch"
+    }
+]
