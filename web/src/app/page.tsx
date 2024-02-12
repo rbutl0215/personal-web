@@ -17,7 +17,20 @@ export default function Home() {
       </div>
       <div className="col-span-1 p-16 overflow-y-auto">
         <Section title="About">
-          About me
+          <div className="mb-8">
+            As a transformative Full Stack Software Engineer, I specialize in
+            bringing ideas to life with precision and flair. My expertise lies
+            in creating dynamic user experiences with React and powering
+            feature-rich backend systems using Ruby on Rails. I am adept in
+            TypeScript and JavaScript, with a mastery in building scalable
+            applications leveraging GraphQL, Postgres, Docker, GitHub workflows,
+            AWS, and Azure. I am not just about code; I am about creating
+            seamless bridges between technology and business needs. Whether
+            managing teams, architecting a pivotal service, or coding the next
+            innovation, my goal remains constant: deliver with excellence. I’m
+            on the lookout for challenges that push the envelope and allow me to
+            leverage my diverse skill set for transformative results.
+          </div>
         </Section>
         <Section title="Experiences">
           {experiences.map((experience, index) => {
@@ -25,11 +38,9 @@ export default function Home() {
           })}
         </Section>
         <Section title="Projects">
-          {
-            projects.map((project, index) => {
-              return <ProjectCard key={index} {...project} />
-            })
-          }
+          {projects.map((project, index) => {
+            return <ProjectCard key={index} {...project} />;
+          })}
         </Section>
       </div>
     </main>

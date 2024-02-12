@@ -53,7 +53,7 @@ export const experiences: ExperienceCardProps[] = [
 export const projects: ProjectCardProps[] = [
     {
         title: "Describby",
-        description: "AI based tooled to assist in content creation or real estate agents",
+        description: "AI based tooled to assist in content creation for real estate agents",
         imageUrl: "https://nlp7257gkjhtxzam.public.blob.vercel-storage.com/describby-4ZSDsxMbfbrXiNzL8zDVQeATLkWGTe.png",
         link: "https://broker-6m3pbq7gv-describby.vercel.app/"
     },
