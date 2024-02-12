@@ -1,5 +1,6 @@
 import ExperienceCard from "@/components/ExperienceCard";
 import { experiences } from "./contants";
+import Section from "@/components/Section";
 
 export default function Home() {
   return (
@@ -14,14 +15,17 @@ export default function Home() {
         </text>
       </div>
       <div className="col-span-1 p-16 overflow-y-auto">
-        {experiences.map((experience, index) => {
-          return (
-            <ExperienceCard
-              key={index}
-              {...experience}
-            />
-          )
-        })}
+        <Section title="About">
+          About me
+        </Section>
+        <Section title="Experiences">
+          {experiences.map((experience, index) => {
+            return <ExperienceCard key={index} {...experience} />;
+          })}
+        </Section>
+        <Section title="Projects">
+          My projects
+        </Section>
       </div>
     </main>
   );
