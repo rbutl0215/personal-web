@@ -14,7 +14,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ title, description, ski
       <div className="mb-4 flex justify-between items-center">
         <span className="text-xl text-gray-300 font-bold">{title}</span>
       </div>
-      <div className="mb-4 text-gray-200">{description}</div>
+      <div className="mb-4 text-gray-200 text-sm">{description}</div>
       <div className="flex flex-wrap gap-2">
         {skills.map((skill, index) => (
           <span key={index} className="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">

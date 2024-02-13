@@ -1,48 +1,49 @@
 import ExperienceCard from "@/components/ExperienceCard";
-import { experiences, projects } from "./contants";
+import { dialogue, experiences, projects } from "./contants";
 import Section from "@/components/Section";
 import ProjectCard from "@/components/ProjectCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
+import Dialogue from "@/components/Dialogue";
 
 export default function Home() {
   return (
-    <main className="grid grid-cols-2 gap-2 h-screen">
-      <div className="col-span-1 p-16 overflow-hidden">
+    <main className="grid grid-cols-1 md:grid-cols-2 gap-2 h-screen">
+      <div className="col-span-1 p-4 md:p-16 overflow-hidden">
         <h1 className="text-4xl font-bold mb-2">Reid Butler</h1>
         <h2 className="text-2xl mb-2">Full Stack Software Engineer</h2>
         <text className="text-lg text-slate-400	">
-          Self-taught hacker at heart, blending creative problem-solving with
-          diverse experiences from factory floors to software development,
-          fueled by a curiosity
+          Self-taught hacker at heart, fueled by a curiosity, supplemented with
+          coffee, fascinated by physics, and endlessly motivated by the next
+          great thing to build
         </text>
         <div className="flex gap-4 py-4">
           <Link href="https://github.com/rbutl0215">
-            <FontAwesomeIcon icon={faGithub} className="w-10 h-10"/>
+            <FontAwesomeIcon icon={faGithub} className="w-10 h-10" />
           </Link>
           <Link href="https://www.linkedin.com/in/reid-butler-eng/">
-            <FontAwesomeIcon icon={faLinkedin} className="w-10 h-10"/>
+            <FontAwesomeIcon icon={faLinkedin} className="w-10 h-10" />
           </Link>
         </div>
       </div>
-      <div className="col-span-1 p-16 overflow-y-auto">
+      <div className="col-span-1 p-4 md:p-16  overflow-y-auto">
         <Section title="About">
-          <div className="mb-8">
-            As a transformative Full Stack Software Engineer, I specialize in
-            bringing ideas to life with precision and flair. My expertise lies
-            in creating dynamic user experiences with React and powering
-            feature-rich backend systems using Ruby on Rails. I am adept in
-            TypeScript and JavaScript, with a mastery in building scalable
-            applications leveraging GraphQL, Postgres, Docker, GitHub workflows,
-            AWS, and Azure. I am not just about code; I am about creating
-            seamless bridges between technology and business needs. Whether
-            managing teams, architecting a pivotal service, or coding the next
-            innovation, my goal remains constant: deliver with excellence. I’m
-            on the lookout for challenges that push the envelope and allow me to
-            leverage my diverse skill set for transformative results.
+          <div className="mb-8 whitespace-pre-line">
+            {`Hi There!👋
+
+              A few years ago, I received a call from a (very) risk-tolerant colleague of mine.
+            `}
+          </div>
+          <Dialogue {...dialogue} />
+          <div className="mb-8 whitespace-pre-line">
+            {`Fast forward to today, and I've built mission critical software for Fortune 100 companies and YC-backed startups. Along the way, I've made countless friends, learned more than I could possibly imagine, and had a career I would not change for anything. If you found your way to this page and are questioning whether or not you should pursue a career in software development, let me give you an emphatic YES.
+
+              These days I am focused on doing freelance work and building my own products. Reach out if you want to work together!
+            `}
           </div>
         </Section>
+
         <Section title="Experiences">
           {experiences.map((experience, index) => {
             return <ExperienceCard key={index} {...experience} />;
